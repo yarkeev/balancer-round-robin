@@ -1,0 +1,187 @@
+{
+	"env": {
+		"browser": true,
+		"es6": true
+	},
+	"extends": [
+		"google",
+		"plugin:@typescript-eslint/eslint-recommended",
+		"plugin:@typescript-eslint/recommended",
+		"plugin:@typescript-eslint/recommended-requiring-type-checking",
+		"plugin:import/errors",
+		"plugin:import/warnings",
+		"plugin:import/typescript"
+	],
+	"globals": {
+		"Atomics": "readonly",
+		"SharedArrayBuffer": "readonly"
+	},
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"ecmaVersion": 2018,
+		"sourceType": "module",
+		"project": "tsconfig.json",
+		"tsconfigRootDir": "."
+	},
+	"plugins": [
+		"@typescript-eslint",
+		"babel",
+		"import",
+		"eslint-plugin-import-helpers"
+	],
+	"settings": {
+		"import/parsers": {
+			"@typescript-eslint/parser": [
+				".ts",
+				".tsx"
+			]
+		},
+		"import/resolver": {
+			"typescript": {
+				"alwaysTryTypes": true
+			}
+		}
+	},
+	"rules": {
+		"indent": [
+			"error",
+			"tab",
+			{
+				"SwitchCase": 1
+			}
+		],
+		"no-tabs": "off",
+		"max-len": "off",
+		"object-curly-spacing": [
+			"error",
+			"always"
+		],
+		"no-unused-vars": "off",
+		"@typescript-eslint/no-unused-vars": [
+			"error",
+			{
+				"vars": "all",
+				"args": "none",
+				"ignoreRestSiblings": false
+			}
+		],
+		"@typescript-eslint/require-await": "off",
+		"no-console": "error",
+		"eol-last": "off",
+		"padded-blocks": [
+			"error",
+			{
+				"blocks": "never",
+				"classes": "always",
+				"switches": "never"
+			}
+		],
+		"require-jsdoc": "off",
+		"new-cap": ["error", { "capIsNewExceptions": ["Translate", "Action", "TestId"] } ],
+		"newline-per-chained-call": [
+			"error",
+			{
+				"ignoreChainWithDepth": 2
+			}
+		],
+		"no-invalid-this": "off",
+		"babel/no-invalid-this": [
+			"error"
+		],
+		"operator-linebreak": [
+			"error",
+			"after",
+			{
+				"overrides": {
+					"?": "before",
+					":": "before"
+				}
+			}
+		],
+		"babel/semi": [
+			"error",
+			"always"
+		],
+		"import/namespace": "off",
+		"import/no-duplicates": "error",
+		"import/no-unassigned-import": "error",
+		"import/no-unresolved": "error",
+		"import/named": "error",
+		"import/export": "error",
+		"import/default": "error",
+		"import/no-named-as-default": "error",
+		"import/no-named-as-default-member": "error",
+		"import/no-named-default": "error",
+		"import/no-unused-modules": "off",
+		"import-helpers/order-imports": [
+			"error",
+			{
+				"groups": [
+					"/^core-js/",
+					"module",
+					"/^@constants/",
+					"/^@enums/",
+					"/^@utils/",
+					"/^@decorators/",
+					"/^@api/",
+					"/^@common/",
+					"/^@containers/",
+					"/^@components/",
+					"/^@ui/",
+					"/^@icons/",
+					[
+						"parent",
+						"sibling",
+						"index"
+					],
+					"/^@interfaces/",
+					"/^[.]/types/",
+					"/[.]scss$/"
+				],
+				"newlinesBetween": "always",
+				"alphabetize": {
+					"order": "asc",
+					"ignoreCase": true
+				}
+			}
+		],
+		"no-multiple-empty-lines": [
+			"error",
+			{
+				"max": 1
+			}
+		],
+		"@typescript-eslint/explicit-function-return-type": "off",
+		"@typescript-eslint/interface-name-prefix": [
+			"error",
+			{ "prefixWithI": "always" }
+		],
+		"@typescript-eslint/no-empty-interface": "off",
+		"@typescript-eslint/unbound-method": "off",
+		"@typescript-eslint/prefer-regexp-exec": "off",
+		"@typescript-eslint/promise-function-async": [
+			"error",
+			{
+				"allowedPromiseNames": [
+					"Thenable"
+				],
+				"checkArrowFunctions": true,
+				"checkFunctionDeclarations": true,
+				"checkFunctionExpressions": true,
+				"checkMethodDeclarations": true
+			}
+		],
+		"@typescript-eslint/no-floating-promises": [
+			"error",
+			{
+				"ignoreVoid": true
+			}
+		],
+		"@typescript-eslint/no-explicit-any": [
+			"error"
+		]
+	}
+}

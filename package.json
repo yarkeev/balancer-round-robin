@@ -1,0 +1,42 @@
+{
+	"name": "balancer-round-robin",
+	"version": "1.0.0",
+	"description": "",
+	"main": "dist/index",
+	"scripts": {
+		"dev": "npm run build && npm run ts -- -w",
+		"eslint": "eslint 'src/**/*.{ts,tsx}' --cache",
+		"ts": "tsc",
+		"test": "jest",
+		"build": "rm -rf ./dist && npm run ts",
+		"prepublish": "npm run eslint && npm run build && npm run test && bump"
+	},
+	"author": "Yarkeev Denis <denis.yarkeev@gmail.com>",
+	"license": "MIT",
+	"devDependencies": {
+		"@types/jest": "^25.2.2",
+		"@typescript-eslint/eslint-plugin": "^2.19.0",
+		"@typescript-eslint/parser": "^2.19.0",
+		"eslint": "^6.8.0",
+		"eslint-config-google": "^0.14.0",
+		"eslint-import-resolver-typescript": "^2.0.0",
+		"eslint-plugin-babel": "^5.3.0",
+		"eslint-plugin-import": "^2.20.1",
+		"eslint-plugin-import-helpers": "^1.0.2",
+		"husky": "^4.2.5",
+		"jest": "^26.0.1",
+		"lint-staged": "^10.2.2",
+		"ts-jest": "^25.5.1",
+		"typescript": "^3.7.5",
+		"version-bump-prompt": "^6.0.3"
+	},
+	"dependencies": {},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"lint-staged": {
+		"./src/**/*.{ts,tsx}": "npm run eslint"
+	}
+}

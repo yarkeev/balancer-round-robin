@@ -1,0 +1,27 @@
+{
+	"compilerOptions": {
+		"module": "commonjs",
+		"declaration" :true,
+		"noImplicitAny": true,
+		"noUnusedLocals": true,
+		"removeComments": true,
+		"preserveConstEnums": true,
+		"sourceMap": true,
+		"allowSyntheticDefaultImports": true,
+		"experimentalDecorators": true,
+		"skipLibCheck": true,
+		"jsx": "react",
+		"target": "es2015",
+		"paths": {
+			"*": [
+				"src/*"
+			]
+		},
+		"baseUrl": ".",
+		"outDir": "dist"
+	},
+	"include": [
+		"./typings/index.d.ts",
+		"./src/**/*"
+	]
+}
