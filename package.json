@@ -9,7 +9,7 @@
 		"ts": "tsc",
 		"test": "jest",
 		"build": "rm -rf ./dist && npm run ts",
-		"prepublish": "npm run eslint && npm run build && npm run test && bump"
+		"prepublishOnly": "npm run eslint && npm run build && npm run test && bump"
 	},
 	"author": "Yarkeev Denis <denis.yarkeev@gmail.com>",
 	"license": "MIT",
