@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/yarkeev/balancer-round-robin.svg)](https://travis-ci.org/github/yarkeev/balancer-round-robin)
+
 # balancer-round-robin
 
 balancer-round-robin is a weighted round robin resource pool. Algorithm is similar to Nginx.
