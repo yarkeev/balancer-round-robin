@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/yarkeev/balancer-round-robin.svg)](https://travis-ci.org/github/yarkeev/balancer-round-robin)
+[![Build Status](https://travis-ci.org/yarkeev/balancer-round-robin.svg?branch=master)](https://travis-ci.org/github/yarkeev/balancer-round-robin)
 
 # balancer-round-robin
 
