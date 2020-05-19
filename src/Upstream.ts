@@ -1,8 +1,9 @@
 import { IUpstreamOptions } from './interfaces';
 
-export class Upstream {
+export class Upstream<T = {}> {
 
 	public server: string;
+	public extra: T;
 	protected index: number;
 	protected weight: number;
 	protected maxFails: number;
@@ -10,18 +11,20 @@ export class Upstream {
 	protected currentFailsCount = 0;
 	protected isAvailableState = true;
 
-	constructor(options: IUpstreamOptions) {
+	constructor(options: IUpstreamOptions<T>) {
 		const {
 			server,
 			weight = 1,
 			maxFails = 1,
 			failTimeout = 10000,
+			extra,
 		} = options;
 
 		this.server = server;
 		this.weight = weight;
 		this.maxFails = maxFails;
 		this.failTimeout = failTimeout;
+		this.extra = extra;
 	}
 
 	setIndex(index: number) {

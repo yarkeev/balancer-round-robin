@@ -26,9 +26,13 @@ npm-debug.log
 .editorconfig
 .nyc_output
 .tmp
+.travis.yml
 postcss.config.js
 tsconfig.json
 tslint.json
 webpack.config.js
 jest.config.js
 package-lock.json
+README.md
+
+/dist/__tests__

@@ -30,9 +30,9 @@ upstreams.setList([
 // Add upstream
 upstreams.add({
     server: 'http://127.0.0.5',
-    weight: 3,
-    maxFails: 1,
-    failTimeout: 1000,
+    weight: 3, // optional, default 1
+    maxFails: 2,  // optional, default 1
+    failTimeout: 5000,  // optional, default 10000
 });
 
 ...
@@ -46,4 +46,21 @@ request(`${upstram.server}/url`, (error, response, body) => {
         upstream.fail();
     }
 });
+
+...
+
+// Extra params
+upstreams.setList([
+    {
+        server: 'http://127.0.0.5',
+        extra: {
+            customProp1: 'customValue1',
+            customProp2: 'customValue2',
+        },
+    }
+]);
+
+const upstream = upstreams.get();
+
+console.log(upstream.extra.customProp1); // => customValue1
 ```

@@ -1,6 +1,6 @@
 {
 	"name": "balancer-round-robin",
-	"version": "1.0.1",
+	"version": "1.0.3",
 	"description": "",
 	"main": "dist/index",
 	"scripts": {
@@ -11,8 +11,15 @@
 		"build": "rm -rf ./dist && npm run ts",
 		"prepublishOnly": "npm run eslint && npm run build && npm run test && bump"
 	},
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/yarkeev/balancer-round-robin.git"
+	},
 	"author": "Yarkeev Denis <denis.yarkeev@gmail.com>",
 	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/yarkeev/balancer-round-robin/issues"
+	},
 	"devDependencies": {
 		"@types/jest": "^25.2.2",
 		"@typescript-eslint/eslint-plugin": "^2.19.0",
