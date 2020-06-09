@@ -1,7 +1,7 @@
 {
 	"name": "balancer-round-robin",
-	"version": "1.0.3",
-	"description": "",
+	"version": "1.0.4",
+	"description": "Weighted round robin resource pool. Algorithm is similar to Nginx",
 	"main": "dist/index",
 	"scripts": {
 		"dev": "npm run build && npm run ts -- -w",
@@ -38,6 +38,16 @@
 		"version-bump-prompt": "^6.0.3"
 	},
 	"dependencies": {},
+	"keywords": [
+		"load balancer",
+		"load balancers",
+		"load balancing",
+		"round robin",
+		"roundrobin",
+		"round-robin",
+		"weighted",
+		"nginx"
+	],
 	"husky": {
 		"hooks": {
 			"pre-commit": "lint-staged"
