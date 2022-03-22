@@ -7,7 +7,6 @@
 /docs
 /coverage
 /dist
-/package-lock.json
 /tmp
 /yarn.lock
 /.eslintcache
