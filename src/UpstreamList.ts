@@ -12,6 +12,31 @@ export class UpstreamList {
 		this.upstreams.push(upstream);
 	}
 
+	remove(server: string) {
+		const index = this.upstreams.findIndex((upstream) => upstream.server === server);
+
+		if (index >= 0) {
+			this.upstreams.splice(index, 1);
+			this.upstreams.forEach((upstream, index) => {
+				upstream.setIndex(index);
+			});
+		}
+	}
+
+	find(server: string) {
+		const index = this.upstreams.findIndex((upstream) => upstream.server === server);
+
+		if (index < 0) {
+			return null;
+		}
+
+		return this.upstreams[index];
+	}
+
+	changeWeight(upstream: Upstream, weight: number) {
+		this.upstreams[upstream.getIndex()].setWeight(weight);
+	}
+
 	setList(list: IUpstreamOptions[]) {
 		this.upstreams = [];
 
