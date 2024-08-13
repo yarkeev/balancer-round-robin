@@ -31,6 +31,10 @@ export class Upstream<T = {}> {
 		this.index = index;
 	}
 
+    setWeight(weight: number) {
+        this.weight = weight;
+    }
+
 	getIndex() {
 		return this.index;
 	}
@@ -59,6 +63,10 @@ export class Upstream<T = {}> {
 
 	isAvailable() {
 		return this.isAvailableState;
+	}
+
+	toggleState() {
+		this.isAvailableState = !this.isAvailableState;
 	}
 
 }
