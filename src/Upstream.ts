@@ -31,9 +31,9 @@ export class Upstream<T = {}> {
 		this.index = index;
 	}
 
-    setWeight(weight: number) {
-        this.weight = weight;
-    }
+	setWeight(weight: number) {
+		this.weight = weight;
+	}
 
 	getIndex() {
 		return this.index;
