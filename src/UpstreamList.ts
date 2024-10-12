@@ -5,8 +5,12 @@ export class UpstreamList {
 
 	protected upstreams: Upstream[] = [];
 
-	add(options: IUpstreamOptions) {
-		const upstream = new Upstream(options);
+	add(options: IUpstreamOptions | Upstream) {
+		let upstream;
+
+		if (!(options instanceof Upstream)) 
+			upstream = new Upstream(options);
+		else upstream = options;
 
 		upstream.setIndex(this.upstreams.length);
 		this.upstreams.push(upstream);
