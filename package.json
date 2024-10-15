@@ -1,11 +1,11 @@
 {
 	"name": "balancer-round-robin",
-	"version": "1.0.6",
+	"version": "1.0.7",
 	"description": "Weighted round robin resource pool. Algorithm is similar to Nginx",
 	"main": "dist/index",
 	"scripts": {
 		"dev": "npm run build && npm run ts -- -w",
-		"eslint": "eslint src/**/*.{ts,tsx} --cache",
+		"eslint": "eslint \"src/**/*.{ts,tsx}\" --cache",
 		"ts": "tsc",
 		"test": "jest",
 		"build": "rm -rf ./dist && npm run ts",
@@ -31,13 +31,12 @@
 		"eslint-plugin-import": "^2.20.1",
 		"eslint-plugin-import-helpers": "^1.0.2",
 		"husky": "^4.2.5",
-		"jest": "^26.0.1",
+		"jest": "^29.7.0",
 		"lint-staged": "^10.2.2",
-		"ts-jest": "^25.5.1",
-		"typescript": "^3.7.5",
+		"ts-jest": "^29.2.5",
+		"typescript": "^5.6.3",
 		"version-bump-prompt": "^6.0.3"
 	},
-	"dependencies": {},
 	"keywords": [
 		"load balancer",
 		"load balancers",

@@ -8,9 +8,11 @@ export class UpstreamList {
 	add(options: IUpstreamOptions | Upstream) {
 		let upstream;
 
-		if (!(options instanceof Upstream)) 
+		if (!(options instanceof Upstream)) {
 			upstream = new Upstream(options);
-		else upstream = options;
+		} else {
+			upstream = options;
+		}
 
 		upstream.setIndex(this.upstreams.length);
 		this.upstreams.push(upstream);
