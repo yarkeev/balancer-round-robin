@@ -1,5 +1,6 @@
-import { IUpstreamOptions } from './interfaces';
 import { Upstream } from './Upstream';
+
+import { IUpstreamOptions } from './interfaces';
 
 export class UpstreamList {
 
@@ -23,8 +24,8 @@ export class UpstreamList {
 
 		if (index >= 0) {
 			this.upstreams.splice(index, 1);
-			this.upstreams.forEach((upstream, index) => {
-				upstream.setIndex(index);
+			this.upstreams.forEach((upstream, idx) => {
+				upstream.setIndex(idx);
 			});
 		}
 	}

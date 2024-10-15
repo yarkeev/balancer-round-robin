@@ -1,6 +1,6 @@
 import { IUpstreamOptions } from './interfaces';
 
-export class Upstream<T = {}> {
+export class Upstream<T = unknown> {
 
 	public server: string;
 	public extra: T;

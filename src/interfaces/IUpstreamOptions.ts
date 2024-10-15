@@ -1,4 +1,4 @@
-export interface IUpstreamOptions<T = {}> {
+export interface IUpstreamOptions<T = unknown> {
 	server: string;
 	weight?: number;
 	maxFails?: number;
