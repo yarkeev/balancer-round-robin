@@ -5,7 +5,7 @@
 	"main": "dist/index",
 	"scripts": {
 		"dev": "npm run build && npm run ts -- -w",
-		"eslint": "eslint 'src/**/*.{ts,tsx}' --cache",
+		"eslint": "eslint src/**/*.{ts,tsx} --cache",
 		"ts": "tsc",
 		"test": "jest",
 		"build": "rm -rf ./dist && npm run ts",

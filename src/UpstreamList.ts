@@ -5,11 +5,40 @@ export class UpstreamList {
 
 	protected upstreams: Upstream[] = [];
 
-	add(options: IUpstreamOptions) {
-		const upstream = new Upstream(options);
+	add(options: IUpstreamOptions | Upstream) {
+		let upstream;
+
+		if (!(options instanceof Upstream)) 
+			upstream = new Upstream(options);
+		else upstream = options;
 
 		upstream.setIndex(this.upstreams.length);
 		this.upstreams.push(upstream);
+	}
+
+	remove(server: string) {
+		const index = this.upstreams.findIndex((upstream) => upstream.server === server);
+
+		if (index >= 0) {
+			this.upstreams.splice(index, 1);
+			this.upstreams.forEach((upstream, index) => {
+				upstream.setIndex(index);
+			});
+		}
+	}
+
+	find(server: string) {
+		const index = this.upstreams.findIndex((upstream) => upstream.server === server);
+
+		if (index < 0) {
+			return null;
+		}
+
+		return this.upstreams[index];
+	}
+
+	changeWeight(upstream: Upstream, weight: number) {
+		this.upstreams[upstream.getIndex()].setWeight(weight);
 	}
 
 	setList(list: IUpstreamOptions[]) {
